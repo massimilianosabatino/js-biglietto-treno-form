@@ -8,23 +8,46 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Calcola il prezzo del tuo biglietto</h1>
-    <form action="get">
-        <div id="km-form">
-            <label for="km">Km da percorrere</label>
-            <input type="number" id="km" name="km">
+    <div class="container">
+        <h1>Calcola il prezzo del tuo biglietto</h1>
+        <!-- Riquadro inserimento dati -->
+        <div class="card rounded">
+            <form action="get">
+                <div class="container-form">
+                    <div class="row justify-center">
+                        <div id="user-name-form" class="col">
+                            <label for="user-name">Nome Cognome</label>
+                            <input type="text" id="user-name" name="user-name">
+                        </div>
+                        <div id="km-form" class="col">
+                            <label for="km">Km da percorrere</label>
+                            <input type="number" id="km" name="km">
+                        </div>
+                        <div id="age-form" class="col">
+                            <label for="age">Fascia d'età</label>
+                            <select name="age" id="age">
+                                <option value="normal">Maggiorenne</option>
+                                <option value="minor">Minorenne</option>
+                                <option value="over">Over 65</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="button-set" class="row justify-center">
+                        <button id="calculate" type="button">Genera</button>
+                        <button id="cancel" type="reset">Annulla</button>
+                    </div>
+                
+                </div>
+            </form>
         </div>
-        <div id="age-form">
-            <label for="age">Fascia d'età</label>
-            <select name="age" id="age">
-                <option value="normal">Maggiorenne</option>
-                <option value="minor">Minorenne</option>
-                <option value="over">Over 65</option>
-            </select>
-        </div>
-        <button id="calculate" type="button">Genera</button>
-        <button id="cancel" type="reset">Annulla</button>
-    </form>
+        <!-- /Riquadro inserimento dati -->
+    </div>
+
+
+
+
+
+    
     <script src="js/main.js"></script>
 </body>
 </html>
