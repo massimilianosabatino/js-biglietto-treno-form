@@ -17,6 +17,10 @@ const ticketOffert = document.getElementById('offert');
 const ticketCar = document.getElementById('car');
 const ticketCp = document.getElementById('cp');
 
+//Variabili casuali
+const carNumber = document.getElementById('car');
+const cpNumber = document.getElementById('cp');
+
 //Definizione condizioni per valutare eventuale sconto e stampa calcolo su click del bottone
 inputButton.addEventListener('click', 
     function() {
@@ -39,6 +43,8 @@ inputButton.addEventListener('click',
         const ticketPriceFinal = ticketPrice.toFixed(2);
         //Inserimento valori su dettagli biglietti
         ticketName.innerHTML = userName;
+        carNumber.innerHTML = Math.floor(Math.random() * 7) + 1;
+        cpNumber.innerHTML = Math.floor(Math.random() * 99999) + 1;
         document.getElementById('ticket-price').innerHTML = ticketPriceFinal;
         
         console.log(kmUser, ageUser);
