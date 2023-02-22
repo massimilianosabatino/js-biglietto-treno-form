@@ -31,6 +31,10 @@ inputButton.addEventListener('click',
         //Popolazione variabili definite da utente
         userName = document.getElementById('user-name').value;
         kmUser = document.getElementById('km').value;
+        //controllo sui campi - funziona solo su uno e non entrambi
+        if ((userName == "") && (kmUser.length == 0))  {
+            alert('Devi compilare i campi');
+        }
         ageUser = document.getElementById('age').value;
         //inserimento valori base
         ticketOffert.innerHTML = 'Biglietto standard';
