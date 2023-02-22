@@ -6,6 +6,7 @@ let kmUser;
 let ageUser;
 let ticketPrice;
 const inputButton = document.getElementById('calculate');
+const resetButton = document.getElementById('cancel');
 
 //Variabili sconti
 const discountMinor = 0.2;
@@ -20,6 +21,9 @@ const ticketCp = document.getElementById('cp');
 //Variabili casuali
 const carNumber = document.getElementById('car');
 const cpNumber = document.getElementById('cp');
+
+//Variabile visualizza / nasconde dettagli
+const controlSwitch = document.getElementById('control'); 
 
 //Definizione condizioni per valutare eventuale sconto e stampa calcolo su click del bottone
 inputButton.addEventListener('click', 
@@ -47,9 +51,21 @@ inputButton.addEventListener('click',
         cpNumber.innerHTML = Math.floor(Math.random() * 99999) + 1;
         document.getElementById('ticket-price').innerHTML = ticketPriceFinal;
         
+        //Attiva / Disattiva visualizzazione dettagli
+        if (!controlSwitch.classList.contains('show')) {
+            controlSwitch.classList.add('show');
+        }
+
+
         console.log(kmUser, ageUser);
         console.log(ticketPrice.toFixed(2));
         }
 )
 
+//Nasconde dettagli alla pressione del bottone annulla
+resetButton.addEventListener('click', 
+    function() {
+        controlSwitch.classList.remove('show');
+    }
+)
 
