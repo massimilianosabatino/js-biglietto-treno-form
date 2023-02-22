@@ -37,15 +37,13 @@ body {
 }
 
 .col {
-    text-align: center;
     width: 100%;
-    margin-bottom: 25px;
 }
 
 /*
 *  Header
 */
-h1 {
+h1, h2 {
     font-size: 1.3rem;
     color: #fff;
     text-align: center;
@@ -57,6 +55,10 @@ h1 {
 /*
 *  Card form input
 */ 
+#ticket-data .col {
+    text-align: center;
+    margin-bottom: 25px;
+}
 
 label {
     color: #B91547;
@@ -105,6 +107,28 @@ button {
 }
 
 
+/*
+*  Card form details
+*/ 
+#ticket-details > .row > .col:first-child {
+    background-color: lightgray;
+}
+
+#ticket-details > .row > .col {
+    padding: 20px;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+h4 {
+    font-size: bold;
+}
+
+#ticket-details > .row > .col:first-child h4 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
 
 
 /*
@@ -115,8 +139,12 @@ button {
         flex-wrap: nowrap;
     }
 
-    .col {
+    #ticket-data .col {
         max-width: calc(100% / 3);
         padding: 0 20px;
+    }
+
+    #ticket-details > .row > .col:first-child {
+        width: 30%;
     }
 }

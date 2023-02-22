@@ -11,7 +11,7 @@
     <div class="container">
         <h1>Calcola il prezzo del tuo biglietto</h1>
         <!-- Riquadro inserimento dati -->
-        <div class="card rounded">
+        <div id="ticket-data" class="card rounded">
             <form action="get">
                 <div class="container-form">
                     <div class="row justify-center">
@@ -36,11 +36,42 @@
                         <button id="calculate" type="button">Genera</button>
                         <button id="cancel" type="reset">Annulla</button>
                     </div>
-                
                 </div>
             </form>
         </div>
         <!-- /Riquadro inserimento dati -->
+        <!-- Riquadro riepilogo -->
+        <h2>Il tuo biglietto</h2>
+        <div id="ticket-details" class="card rounded">
+            <h3>Dettagli passeggeri</h3>
+            <div class="row">
+                <div class="col">
+                    <h4>Nome passeggero</h4>
+                    <div id="user-name"></div>
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <div class="col">
+                            <h4>Offerta</h4>
+                            <div id="offert"></div>
+                        </div>
+                        <div class="col">
+                            <h4>Carrozza</h4>
+                            <div id="car"></div>
+                        </div>
+                        <div class="col">
+                            <h4>Codice CP</h4>
+                            <div id="cp"></div>
+                        </div>
+                        <div class="col">
+                            <h4>Costo biglietto</h4>
+                            <div id="ticket-price"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Riquadro riepilogo -->
     </div>
 
 
